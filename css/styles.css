@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    background: snow;
+}
+
+
+.slide-1 {
+    background: url(../images/img.jpg);
+}
+
+.slide-2 {
+    background: url(../images/img10.jpg);
+}
+
+.slide-3 {
+    background: url(../images/img0.jpg);
+}
+
+.slide-4 {
+    background: url(../images/img4.jpg);
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+    transition: 1s;
+}
+
+.caption {
+    background: rgba(0, 0, 0, 0.03);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px 0;
+}
+
+.caption h3 {
+    color: snow;
+    text-align: left;
+    position: relative;
+    top: 180px;
+    width: 7%;
+    font-size: 5rem;
+    font-family: 'Yantramanav', sans-serif;
+    padding: 1rem;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    margin-left: 30px;
+    text-shadow: 2px 2px 2px rgba(51, 51, 51, 0.3);
+}
+
+.arrow {
+    position: absolute;
+    top: 45%;
+    transition: transform .25s;
+    cursor: pointer;
+    z-index: 100;
+    margin: 8px;
+}
+
+.arrow img {
+    width: 40px;
+}
+
+.arrow:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(130%);
+}
+
+.l {
+    left: 0;
+}
+
+.r {
+    right: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 14vh;
+    font-family: 'Yantramanav', sans-serif;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.logo {
+    color: snow;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+.logo h4 {
+    font-family: 'Monsieur La Doulaise', cursive;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a{
+    color: snow;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: snow;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:900px) {
+    body {
+        overflow-y: hidden;
+    }
+    .logo {
+        align-items: left;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        column-gap: 0px;
+        align-items: center;
+        width: 100%;
+        background-color: snow;
+        transform: translateY(-110%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links a {
+        color: rgb(10, 10, 10);
+    }
+    .burger{
+        display: block;
+    }
+    
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -6px);
+}
